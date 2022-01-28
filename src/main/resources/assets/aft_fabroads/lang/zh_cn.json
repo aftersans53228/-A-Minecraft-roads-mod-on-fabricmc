@@ -1,0 +1,10 @@
+{   
+    "itemGroup.aft_fabroads.normal_road_blocks": "普通道路方块",
+    "itemGroup.aft_fabroads.normal_line_stickers": "普通划线贴纸",
+    "block.aft_fabroads.road_block": "道路方块",
+    "block.aft_fabroads.line_straight": "直线",
+    "block.aft_fabroads.line_corner":"转角线",
+    "block.aft_fabroads.line_tshaped":"T字形线",
+    "block.aft_fabroads.line_cross":"交叉线"
+
+}

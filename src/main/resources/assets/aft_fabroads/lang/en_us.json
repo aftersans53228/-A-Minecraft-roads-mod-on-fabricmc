@@ -1,0 +1,10 @@
+{   
+    "itemGroup.aft_fabroads.normal_road_blocks": "Normal Road Blocks",
+    "itemGroup.aft_fabroads.normal_line_stickers": "Normal Line_Stickers",
+    "block.aft_fabroads.road_block": "Road Block",
+    "block.aft_fabroads.line_straight":"Straight line",
+    "block.aft_fabroads.line_corner":"Corner Line",
+    "block.aft_fabroads.line_tshaped":"T-shaped Line",
+    "block.aft_fabroads.line_cross":"Cross Line"
+
+}

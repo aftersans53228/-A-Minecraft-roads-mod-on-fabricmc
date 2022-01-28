@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "id": "aft_fabroads",
+  "version": "${version}",
+
+  "name": "aftersans53228's fabroads",
+  "description": "是的，这只是个fabric上的道路模组,有什么问题找qq号3325142383",
+  "authors": [
+    "aftersans53228（暗访谈到你家访谈你）"
+  ],
+  "contact": {
+    "homepage": "https://space.bilibili.com/407495850",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+
+  "license": "CC0-1.0",
+  "icon": "assets/aft_fabroads/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.aftersans53228.aft_fabroads.FabroadsMod"
+    ],
+    "client": [
+      "net.aftersans53228.aft_fabroads.ClientInit"
+    ]
+  },
+  "mixins": [
+    "aft_fabroads.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.12.3",
+    "fabric": "*",
+    "minecraft": "1.16.x",
+    "java": ">=8"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}
