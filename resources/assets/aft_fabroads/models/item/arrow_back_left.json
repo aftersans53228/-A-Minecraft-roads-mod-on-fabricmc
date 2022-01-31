@@ -1,9 +1,0 @@
-{
-  "parent": "aft_fabroads:block/arrow/arrow_back_left_mini",
-  "textures": {
-    "bottom": "block/arrow/arrow_back_left",
-    "top": "block/arrow/arrow_back_left",
-    "side": "block/arrow/arrow_back_left"
-  }
-}
-
