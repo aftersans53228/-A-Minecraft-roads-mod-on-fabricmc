@@ -10,6 +10,7 @@ import net.minecraft.client.render.RenderLayer;
 public class ClientInit implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
+        //client Initialize
         //普通方块
         BlockRenderLayerMap.INSTANCE.putBlock(FabroadsMod.RoadBlock, RenderLayer.getCutoutMipped());
         //地面划线
@@ -21,5 +22,13 @@ public class ClientInit implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(FabroadsMod.ArrowForward, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(FabroadsMod.ArrowLeft, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(FabroadsMod.ArrowRight, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(FabroadsMod.ArrowForwardLeft, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(FabroadsMod.ArrowForwardRight, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(FabroadsMod.ArrowBack, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(FabroadsMod.ArrowLeftRight, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(FabroadsMod.ArrowBackLeft, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(FabroadsMod.ArrowBackForward, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(FabroadsMod.ArrowConfluenceLeft, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(FabroadsMod.ArrowConfluenceRight, RenderLayer.getCutout());
     }
 }

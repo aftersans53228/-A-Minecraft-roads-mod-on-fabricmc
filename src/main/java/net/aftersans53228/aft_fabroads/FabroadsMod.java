@@ -1,9 +1,7 @@
 package net.aftersans53228.aft_fabroads;
 
 import net.aftersans53228.aft_fabroads.block.*;
-import net.aftersans53228.aft_fabroads.block.arrowblock.ArrowForward;
-import net.aftersans53228.aft_fabroads.block.arrowblock.ArrowLeft;
-import net.aftersans53228.aft_fabroads.block.arrowblock.ArrowRight;
+import net.aftersans53228.aft_fabroads.block.arrowblock.*;
 import net.aftersans53228.aft_fabroads.item.NormalArrowStickers;
 import net.aftersans53228.aft_fabroads.item.NormalLineStickers;
 import net.aftersans53228.aft_fabroads.item.NormalRoadBlock;
@@ -40,6 +38,14 @@ public class FabroadsMod implements ModInitializer {
 	public static final Block ArrowForward = new ArrowForward(FabricBlockSettings.of(Material.STONE).hardness(0.1f).nonOpaque());
 	public static final Block ArrowLeft = new ArrowLeft(FabricBlockSettings.of(Material.STONE).hardness(0.1f).nonOpaque());
 	public static final Block ArrowRight = new ArrowRight(FabricBlockSettings.of(Material.STONE).hardness(0.1f).nonOpaque());
+	public static final Block ArrowForwardLeft = new ArrowForwardLeft(FabricBlockSettings.of(Material.STONE).hardness(0.1f).nonOpaque());
+	public static final Block ArrowForwardRight = new ArrowForwardRight(FabricBlockSettings.of(Material.STONE).hardness(0.1f).nonOpaque());
+	public static final Block ArrowBack = new ArrowBack(FabricBlockSettings.of(Material.STONE).hardness(0.1f).nonOpaque());
+	public static final Block ArrowLeftRight = new ArrowLeftRight(FabricBlockSettings.of(Material.STONE).hardness(0.1f).nonOpaque());
+	public static final Block ArrowBackLeft = new ArrowBackLeft(FabricBlockSettings.of(Material.STONE).hardness(0.1f).nonOpaque());
+	public static final Block ArrowBackForward = new ArrowBackForward(FabricBlockSettings.of(Material.STONE).hardness(0.1f).nonOpaque());
+	public static final Block ArrowConfluenceLeft = new ArrowConfluenceLeft(FabricBlockSettings.of(Material.STONE).hardness(0.1f).nonOpaque());
+	public static final Block ArrowConfluenceRight = new ArrowConfluenceRight(FabricBlockSettings.of(Material.STONE).hardness(0.1f).nonOpaque());
 	//创建物品组
 	public static final ItemGroup NormalRoadBlockGROUP = NormalRoadBlock.get();
 	public static final ItemGroup NormalLineStickersGROUP = NormalLineStickers.get();
@@ -82,6 +88,30 @@ public class FabroadsMod implements ModInitializer {
 
 		Registry.register(Registry.BLOCK,new Identifier("aft_fabroads","arrow_right"),ArrowRight);
 		Registry.register(Registry.ITEM,new Identifier("aft_fabroads","arrow_right"),new BlockItem(ArrowRight,new Item.Settings().group(NormalArrowStickersGROUP)));
+
+		Registry.register(Registry.BLOCK,new Identifier("aft_fabroads","arrow_forward_left"),ArrowForwardLeft);
+		Registry.register(Registry.ITEM,new Identifier("aft_fabroads","arrow_forward_left"),new BlockItem(ArrowForwardLeft,new Item.Settings().group(NormalArrowStickersGROUP)));
+
+		Registry.register(Registry.BLOCK,new Identifier("aft_fabroads","arrow_forward_right"),ArrowForwardRight);
+		Registry.register(Registry.ITEM,new Identifier("aft_fabroads","arrow_forward_right"),new BlockItem(ArrowForwardRight,new Item.Settings().group(NormalArrowStickersGROUP)));
+
+		Registry.register(Registry.BLOCK,new Identifier("aft_fabroads","arrow_back"),ArrowBack);
+		Registry.register(Registry.ITEM,new Identifier("aft_fabroads","arrow_back"),new BlockItem(ArrowBack,new Item.Settings().group(NormalArrowStickersGROUP)));
+
+		Registry.register(Registry.BLOCK,new Identifier("aft_fabroads","arrow_left_right"), ArrowLeftRight);
+		Registry.register(Registry.ITEM,new Identifier("aft_fabroads","arrow_left_right"),new BlockItem(ArrowLeftRight,new Item.Settings().group(NormalArrowStickersGROUP)));
+
+		Registry.register(Registry.BLOCK,new Identifier("aft_fabroads","arrow_back_left"), ArrowBackLeft);
+		Registry.register(Registry.ITEM,new Identifier("aft_fabroads","arrow_back_left"),new BlockItem(ArrowBackLeft,new Item.Settings().group(NormalArrowStickersGROUP)));
+
+		Registry.register(Registry.BLOCK,new Identifier("aft_fabroads","arrow_back_forward"), ArrowBackForward);
+		Registry.register(Registry.ITEM,new Identifier("aft_fabroads","arrow_back_forward"),new BlockItem(ArrowBackForward,new Item.Settings().group(NormalArrowStickersGROUP)));
+
+		Registry.register(Registry.BLOCK,new Identifier("aft_fabroads","arrow_confluence_left"), ArrowConfluenceLeft);
+		Registry.register(Registry.ITEM,new Identifier("aft_fabroads","arrow_confluence_left"),new BlockItem(ArrowConfluenceLeft,new Item.Settings().group(NormalArrowStickersGROUP)));
+
+		Registry.register(Registry.BLOCK,new Identifier("aft_fabroads","arrow_confluence_right"), ArrowConfluenceRight);
+		Registry.register(Registry.ITEM,new Identifier("aft_fabroads","arrow_confluence_right"),new BlockItem(ArrowConfluenceRight,new Item.Settings().group(NormalArrowStickersGROUP)));
 
 		LOGGER.info("Arrow blocks Initialized...");
 

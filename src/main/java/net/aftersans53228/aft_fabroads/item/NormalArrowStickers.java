@@ -17,6 +17,14 @@ public class NormalArrowStickers {
                 stacks.add(new ItemStack(FabroadsMod.ArrowForward));
                 stacks.add(new ItemStack(FabroadsMod.ArrowLeft));
                 stacks.add(new ItemStack(FabroadsMod.ArrowRight));
+                stacks.add(new ItemStack(FabroadsMod.ArrowForwardLeft));
+                stacks.add(new ItemStack(FabroadsMod.ArrowForwardRight));
+                stacks.add(new ItemStack(FabroadsMod.ArrowLeftRight));
+                stacks.add(new ItemStack(FabroadsMod.ArrowBack));
+                stacks.add(new ItemStack(FabroadsMod.ArrowBackLeft));
+                stacks.add(new ItemStack(FabroadsMod.ArrowBackForward));
+                stacks.add(new ItemStack(FabroadsMod.ArrowConfluenceLeft));
+                stacks.add(new ItemStack(FabroadsMod.ArrowConfluenceRight));
             })
             .build();
 }
