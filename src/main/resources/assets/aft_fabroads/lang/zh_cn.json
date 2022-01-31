@@ -1,10 +1,22 @@
 {   
     "itemGroup.aft_fabroads.normal_road_blocks": "普通道路方块",
     "itemGroup.aft_fabroads.normal_line_stickers": "普通划线贴纸",
+    "itemGroup.aft_fabroads.normal_arrow_stickers": "普通箭头贴纸",
     "block.aft_fabroads.road_block": "道路方块",
     "block.aft_fabroads.line_straight": "直线",
     "block.aft_fabroads.line_corner":"转角线",
     "block.aft_fabroads.line_tshaped":"T字形线",
-    "block.aft_fabroads.line_cross":"交叉线"
+    "block.aft_fabroads.line_cross":"交叉线",
+    "block.aft_fabroads.arrow_forward":"直行箭头",
+    "block.aft_fabroads.arrow_left":"左转箭头",
+    "block.aft_fabroads.arrow_right":"右转箭头",
+    "block.aft_fabroads.arrow_forward_left":"直行左转箭头",
+    "block.aft_fabroads.arrow_forward_right":"直行右转箭头",
+    "block.aft_fabroads.arrow_left_right":"左右转箭头",
+    "block.aft_fabroads.arrow_back":"掉头箭头",
+    "block.aft_fabroads.arrow_back_left":"掉头左转箭头",
+    "block.aft_fabroads.arrow_back_forward":"掉头右转箭头",
+    "block.aft_fabroads.arrow_confluence_left":"向左汇流箭头",
+    "block.aft_fabroads.arrow_confluence_right":"向右汇流箭头"
 
 }
