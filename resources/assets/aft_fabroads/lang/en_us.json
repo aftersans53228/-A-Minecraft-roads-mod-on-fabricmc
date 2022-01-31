@@ -1,0 +1,22 @@
+{   
+    "itemGroup.aft_fabroads.normal_road_blocks": "Normal Road Blocks",
+    "itemGroup.aft_fabroads.normal_line_stickers": "Normal Line Stickers",
+    "itemGroup.aft_fabroads.normal_arrow_stickers": "Normal Arrow Stickers",
+    "block.aft_fabroads.road_block": "Road Block",
+    "block.aft_fabroads.line_straight":"Straight line",
+    "block.aft_fabroads.line_corner":"Corner Line",
+    "block.aft_fabroads.line_tshaped":"T-shaped Line",
+    "block.aft_fabroads.line_cross":"Cross Line",
+    "block.aft_fabroads.arrow_forward":"Forward Arrow",
+    "block.aft_fabroads.arrow_left":"Left Arrow",
+    "block.aft_fabroads.arrow_right":"Right Arrow",
+    "block.aft_fabroads.arrow_forward_left":"Forward-left Arrow",
+    "block.aft_fabroads.arrow_forward_right":"Forward-right Arrow",
+    "block.aft_fabroads.arrow_left_right":"Left-right Arrow",
+    "block.aft_fabroads.arrow_back":"Back Arrow",
+    "block.aft_fabroads.arrow_back_left":"Back-left Arrow",
+    "block.aft_fabroads.arrow_back_forward":"Back-right Arrow",
+    "block.aft_fabroads.arrow_confluence_left":"Confluence-left Arrow",
+    "block.aft_fabroads.arrow_confluence_right":"Confluence-right Arrow"
+
+}
