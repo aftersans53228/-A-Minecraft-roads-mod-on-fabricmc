@@ -20,9 +20,9 @@ import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 
 
-public class LineTshaped extends HorizontalFacingBlock {
+public class LineDiagonal extends HorizontalFacingBlock {
     public static final BooleanProperty is_Yellow = BooleanProperty.of("is_yellow");
-    public LineTshaped(Settings settings) {
+    public LineDiagonal(Settings settings) {
         super(settings);
         setDefaultState(this.stateManager.getDefaultState().with(Properties.HORIZONTAL_FACING, Direction.NORTH));
         setDefaultState(getStateManager().getDefaultState().with(is_Yellow, false));
@@ -33,7 +33,6 @@ public class LineTshaped extends HorizontalFacingBlock {
         stateManager.add(Properties.HORIZONTAL_FACING);
     }
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
-        LOGGER.info(state);
         if (state.get(is_Yellow))  world.setBlockState(pos, state.with(is_Yellow, false));
         else world.setBlockState(pos, state.with(is_Yellow, true));
     return ActionResult.SUCCESS;

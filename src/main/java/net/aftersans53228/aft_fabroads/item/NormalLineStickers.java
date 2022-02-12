@@ -18,6 +18,9 @@ public class NormalLineStickers {
                 stacks.add(new ItemStack(FabroadsMod.LineCorner));
                 stacks.add(new ItemStack(FabroadsMod.LineTshaped));
                 stacks.add(new ItemStack(FabroadsMod.LineCross));
+                stacks.add(new ItemStack(FabroadsMod.LineDiagonal));
+                stacks.add(new ItemStack(FabroadsMod.LineLeftBend));
+                stacks.add(new ItemStack(FabroadsMod.LineRightBend));
             })
             .build();
 }
