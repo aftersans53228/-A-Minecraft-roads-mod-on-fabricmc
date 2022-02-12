@@ -20,6 +20,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Check for errors.
+        uses: github/super-linter@v3
+        env:
+          VALIDATE_ALL_CODEBASE: false
       - name: Validate Gradle Wrapper
         uses: gradle/wrapper-validation-action@v1
       - name: Setup JDK ${{ matrix.java }}
