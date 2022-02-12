@@ -3,7 +3,7 @@
   "id": "aft_fabroads",
   "version": "${version}",
 
-  "name": "aftersans53228's fabroads",
+  "name": "aftersans53228's fabric roads",
   "description": "是的，这只是个fabric上的道路模组,有什么问题github敲issue.",
   "authors": [
     "aftersans53228（暗访谈到你家访谈你）"
@@ -22,7 +22,7 @@
       "net.aftersans53228.aft_fabroads.FabroadsMod"
     ],
     "client": [
-      "net.aftersans53228.aft_fabroads.ClientInit"
+      "net.aftersans53228.aft_fabroads.FabroadsClientMod"
     ]
   },
   "mixins": [

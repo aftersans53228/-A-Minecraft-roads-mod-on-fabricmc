@@ -7,6 +7,9 @@
     "block.aft_fabroads.line_corner":"Corner Line",
     "block.aft_fabroads.line_tshaped":"T-shaped Line",
     "block.aft_fabroads.line_cross":"Cross Line",
+    "block.aft_fabroads.line_diagonal":"Diagonal line",
+    "block.aft_fabroads.line_left_bend":"Bend line(left)",
+    "block.aft_fabroads.line_right_bend":"Bend line(right)",
     "block.aft_fabroads.arrow_forward":"Forward Arrow",
     "block.aft_fabroads.arrow_left":"Left Arrow",
     "block.aft_fabroads.arrow_right":"Right Arrow",
@@ -18,5 +21,6 @@
     "block.aft_fabroads.arrow_back_forward":"Back-right Arrow",
     "block.aft_fabroads.arrow_confluence_left":"Confluence-left Arrow",
     "block.aft_fabroads.arrow_confluence_right":"Confluence-right Arrow"
+
 
 }
