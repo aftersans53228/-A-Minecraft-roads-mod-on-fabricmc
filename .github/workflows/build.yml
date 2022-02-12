@@ -23,6 +23,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: Check for errors.
+        if: ${{ runner.os == 'Linux' }}
         uses: github/super-linter@v3
         env:
           VALIDATE_ALL_CODEBASE: false
