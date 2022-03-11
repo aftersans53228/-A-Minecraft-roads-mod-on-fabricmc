@@ -2,13 +2,11 @@ package net.aftersans53228.aft_fabroads;
 
 import net.aftersans53228.aft_fabroads.block.*;
 import net.aftersans53228.aft_fabroads.block.arrowblock.*;
-import net.aftersans53228.aft_fabroads.item.NormalArrowStickers;
-import net.aftersans53228.aft_fabroads.item.NormalLineStickers;
-import net.aftersans53228.aft_fabroads.item.NormalRoadBlock;
-import net.aftersans53228.aft_fabroads.item.RoadTool;
+import net.aftersans53228.aft_fabroads.item.*;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.fabricmc.fabric.api.object.builder.v1.client.model.FabricModelPredicateProviderRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.Material;
 import net.minecraft.item.BlockItem;
@@ -29,9 +27,12 @@ public class FabroadsMod implements ModInitializer {
 	// 如果有半透明纹理，可以将 RenderLayer.getCutout() 替换为 RenderLayer.getTranslucent()。
 
 	//创建物品
-	public static final Item RoadTool = new RoadTool(new FabricItemSettings().group(ItemGroup.TOOLS));
+	public static final Item RoadTool = new RoadTool(new FabricItemSettings().group(ItemGroup.TOOLS).maxCount(1));
 	//创建普通道路方块
 	public static final Block RoadBlock = new RoadBlock(FabricBlockSettings.of(Material.STONE).hardness(1.5f));
+	public static final Block RoadBlockConcrete = new RoadBlockConcrete(FabricBlockSettings.of(Material.STONE).hardness(1.5f));
+	public static final Block ManholeCover = new ManholeCover(FabricBlockSettings.of(Material.STONE).hardness(1.5f));
+	public static final Block ManholeCoverConcrete = new ManholeCoverConcrete(FabricBlockSettings.of(Material.STONE).hardness(1.5f));
 	//创建划线贴纸
 	public static final Block LineStraight = new LineStraight(FabricBlockSettings.of(Material.STONE).hardness(0.1f).nonOpaque());
 	public static final Block LineCorner = new LineCorner(FabricBlockSettings.of(Material.STONE).hardness(0.1f).nonOpaque());
@@ -40,6 +41,8 @@ public class FabroadsMod implements ModInitializer {
 	public static final Block LineDiagonal = new LineDiagonal(FabricBlockSettings.of(Material.STONE).hardness(0.1f).nonOpaque());
 	public static final Block LineLeftBend = new LineLeftBend(FabricBlockSettings.of(Material.STONE).hardness(0.1f).nonOpaque());
 	public static final Block LineRightBend = new LineRightBend(FabricBlockSettings.of(Material.STONE).hardness(0.1f).nonOpaque());
+	public static final Block LineForkLeft = new LineForkLeft(FabricBlockSettings.of(Material.STONE).hardness(0.1f).nonOpaque());
+	public static final Block LineForkRight = new LineForkRight(FabricBlockSettings.of(Material.STONE).hardness(0.1f).nonOpaque());
 	//创建箭头贴纸
 	public static final Block ArrowForward = new ArrowForward(FabricBlockSettings.of(Material.STONE).hardness(0.1f).nonOpaque());
 	public static final Block ArrowLeft = new ArrowLeft(FabricBlockSettings.of(Material.STONE).hardness(0.1f).nonOpaque());
@@ -52,10 +55,14 @@ public class FabroadsMod implements ModInitializer {
 	public static final Block ArrowBackForward = new ArrowBackForward(FabricBlockSettings.of(Material.STONE).hardness(0.1f).nonOpaque());
 	public static final Block ArrowConfluenceLeft = new ArrowConfluenceLeft(FabricBlockSettings.of(Material.STONE).hardness(0.1f).nonOpaque());
 	public static final Block ArrowConfluenceRight = new ArrowConfluenceRight(FabricBlockSettings.of(Material.STONE).hardness(0.1f).nonOpaque());
+	//创建装饰方块
+	public static final Block Railings = new Railings(FabricBlockSettings.of(Material.STONE).hardness(1.5f));
+	public static final Block ExpresswayRailings = new ExpresswayRailings(FabricBlockSettings.of(Material.STONE).hardness(1.5f));
 	//创建物品组
 	public static final ItemGroup NormalRoadBlockGROUP = NormalRoadBlock.get();
 	public static final ItemGroup NormalLineStickersGROUP = NormalLineStickers.get();
 	public static final ItemGroup NormalArrowStickersGROUP = NormalArrowStickers.get();
+	public static final ItemGroup RoadDecorationsGROUP = RoadDecoration.get();
 
 
 	@Override
@@ -73,6 +80,16 @@ public class FabroadsMod implements ModInitializer {
 		//普通方块注册
 		Registry.register(Registry.BLOCK,new Identifier("aft_fabroads","road_block"),RoadBlock);
 		Registry.register(Registry.ITEM,new Identifier("aft_fabroads","road_block"),new BlockItem(RoadBlock,new Item.Settings().group(NormalRoadBlockGROUP)));
+
+		Registry.register(Registry.BLOCK,new Identifier("aft_fabroads","road_block_concrete"),RoadBlockConcrete);
+		Registry.register(Registry.ITEM,new Identifier("aft_fabroads","road_block_concrete"),new BlockItem(RoadBlockConcrete,new Item.Settings().group(NormalRoadBlockGROUP)));
+
+		Registry.register(Registry.BLOCK,new Identifier("aft_fabroads","manhole_cover"),ManholeCover);
+		Registry.register(Registry.ITEM,new Identifier("aft_fabroads","manhole_cover"),new BlockItem(ManholeCover,new Item.Settings().group(NormalRoadBlockGROUP)));
+
+		Registry.register(Registry.BLOCK,new Identifier("aft_fabroads","manhole_cover_concrete"),ManholeCoverConcrete);
+		Registry.register(Registry.ITEM,new Identifier("aft_fabroads","manhole_cover_concrete"),new BlockItem(ManholeCoverConcrete,new Item.Settings().group(NormalRoadBlockGROUP)));
+
 		LOGGER.info("Normal blocks Initialized...");
 
 		//地面划线注册
@@ -96,6 +113,12 @@ public class FabroadsMod implements ModInitializer {
 
 		Registry.register(Registry.BLOCK,new Identifier("aft_fabroads","line_right_bend"),LineRightBend);
 		Registry.register(Registry.ITEM,new Identifier("aft_fabroads","line_right_bend"),new BlockItem(LineRightBend,new Item.Settings().group(NormalLineStickersGROUP)));
+
+		Registry.register(Registry.BLOCK,new Identifier("aft_fabroads","line_fork_left"),LineForkLeft);
+		Registry.register(Registry.ITEM,new Identifier("aft_fabroads","line_fork_left"),new BlockItem(LineForkLeft,new Item.Settings().group(NormalLineStickersGROUP)));
+
+		Registry.register(Registry.BLOCK,new Identifier("aft_fabroads","line_fork_right"),LineForkRight);
+		Registry.register(Registry.ITEM,new Identifier("aft_fabroads","line_fork_right"),new BlockItem(LineForkRight,new Item.Settings().group(NormalLineStickersGROUP)));
 
 		LOGGER.info("Line blocks Initialized...");
 
@@ -133,6 +156,13 @@ public class FabroadsMod implements ModInitializer {
 		Registry.register(Registry.BLOCK,new Identifier("aft_fabroads","arrow_confluence_right"), ArrowConfluenceRight);
 		Registry.register(Registry.ITEM,new Identifier("aft_fabroads","arrow_confluence_right"),new BlockItem(ArrowConfluenceRight,new Item.Settings().group(NormalArrowStickersGROUP)));
 		LOGGER.info("Arrow blocks Initialized...");
+
+		//道路装饰注册
+		Registry.register(Registry.BLOCK,new Identifier("aft_fabroads","railings"), Railings);
+		Registry.register(Registry.ITEM,new Identifier("aft_fabroads","railings"),new BlockItem(Railings,new Item.Settings().group(RoadDecorationsGROUP)));
+
+		Registry.register(Registry.BLOCK,new Identifier("aft_fabroads","expressway_railings"), ExpresswayRailings);
+		Registry.register(Registry.ITEM,new Identifier("aft_fabroads","expressway_railings"),new BlockItem(ExpresswayRailings,new Item.Settings().group(RoadDecorationsGROUP)));
 
 
 		LOGGER.info("aft's Fabroads Initialized...");

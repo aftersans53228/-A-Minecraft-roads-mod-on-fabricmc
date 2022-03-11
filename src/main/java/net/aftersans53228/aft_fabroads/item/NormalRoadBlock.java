@@ -15,6 +15,9 @@ public class NormalRoadBlock {
             .icon(() -> new ItemStack(FabroadsMod.RoadBlock))
             .appendItems(stacks -> {
                 stacks.add(new ItemStack(FabroadsMod.RoadBlock));
+                stacks.add(new ItemStack(FabroadsMod.RoadBlockConcrete));
+                stacks.add(new ItemStack(FabroadsMod.ManholeCover));
+                stacks.add(new ItemStack(FabroadsMod.ManholeCoverConcrete));
             })
             .build();
 }

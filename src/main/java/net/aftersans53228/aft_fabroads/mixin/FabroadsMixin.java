@@ -9,9 +9,18 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(TitleScreen.class)
 public class FabroadsMixin {/*
-	@Inject(at = @At("HEAD"), method = "init()V")
+	1@Inject(at = @At("HEAD"), method = "init()V")
 	private void init(CallbackInfo info) {
 		FabroadsMod.LOGGER.info("aft's fabroads running...");
 	}
 	*/
 }
+/*
+是的现在如你所见
+我他妈根本就没用mixin字节码
+这玩意我也懒得删
+写一段注释纯属糊弄
+没啥用
+也没用到
+fabric模组示例自带（认真
+ */

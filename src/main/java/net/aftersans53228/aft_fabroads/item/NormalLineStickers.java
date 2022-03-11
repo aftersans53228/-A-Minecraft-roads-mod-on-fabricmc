@@ -21,6 +21,8 @@ public class NormalLineStickers {
                 stacks.add(new ItemStack(FabroadsMod.LineDiagonal));
                 stacks.add(new ItemStack(FabroadsMod.LineLeftBend));
                 stacks.add(new ItemStack(FabroadsMod.LineRightBend));
+                stacks.add(new ItemStack(FabroadsMod.LineForkLeft));
+                stacks.add(new ItemStack(FabroadsMod.LineForkRight));
             })
             .build();
 }
